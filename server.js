@@ -219,8 +219,8 @@ app.post('/api/chat', async (req, res) => {
 			if (!part.text || typeof part.text !== 'string') {
 				return res.status(400).json({ error: 'Invalid history format: each part must have a text string' });
 			}
-			if (part.text.length > 2000) {
-				return res.status(400).json({ error: 'Message in history is too long (max 1000 characters)' });
+			if (part.text.length > 4000) {
+				return res.status(400).json({ error: 'Message in history is too long (max 4000 characters)' });
 			}
 		}
 	}
