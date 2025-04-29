@@ -146,7 +146,7 @@ app.post('/api/chat', async (req, res) => {
     botResponse = botResponse.replace(/\*{3,}/g, '**'); // Replace *** or more with **
     botResponse = botResponse.replace(/\n\s*\n/g, '\n'); // Remove extra blank lines
 
-    if (botResponse.length > 2000) {
+    if (botResponse.length > 4000) {
       return res.status(500).json({ error: 'Response too long, please try a different query' });
     }
 
